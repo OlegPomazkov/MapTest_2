@@ -5,7 +5,7 @@
 2. cd MapTest_2
 3. cd frontend
 4. npm install
-5. cd ../server
+5. cd ../backend
 6. npm install
 7. npm start
 
