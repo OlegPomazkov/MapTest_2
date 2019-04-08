@@ -30,7 +30,7 @@ export default {
   },
   methods: {
   	handleRowClicked(row) {
-  		this.$router.push({ path: `/data/${row.id}`})
+  		this.$router.push({ name: "dialog", params: {id: row.id}})
   	},
   }
 }

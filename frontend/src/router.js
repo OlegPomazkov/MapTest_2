@@ -9,11 +9,17 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '/',
+      name: 'main',
+      component: DataComp, 
+    },
+    {
       path: '/data',
       name: 'table',
       component: DataComp, 
       children: [
         { 
+          name: 'dialog',
           path: ':id', 
           component: DialogComponent 
         },
