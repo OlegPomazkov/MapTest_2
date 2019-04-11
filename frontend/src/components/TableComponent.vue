@@ -1,18 +1,18 @@
 <template lang="pug">
-	div
-		el-table(
-			height="500"
-			:highlight-current-row="true"
-			:data="points"
-			@row-click="handleRowClick"
+	el-table(
+		height="500"
+		:style="{width: '500px'}"
+		:highlight-current-row="true"
+		:data="points"
+		@row-click="handleRowClick"
+	)
+		el-table-column(
+			v-for="item in tableConfig" 
+			:width="item.width"
+			:label="item.label" 
+			:prop="item.name"
+			:key="item.id"
 		)
-			el-table-column(
-				v-for="(item, k) in tableConfig" 
-				:width="item.width"
-				:label="item.label" 
-				:prop="item.name"
-				:key="item.id"
-			)
 </template>
 
 <script>
@@ -26,10 +26,8 @@ export default {
 		}
 	},
 	data() {
-		const config = DATA_CONFIG
-
 		return {
-			tableConfig: config.filter(i => i.tableView)
+			tableConfig: DATA_CONFIG.filter(i => i.tableView)
 		}
 	},
 	methods: {

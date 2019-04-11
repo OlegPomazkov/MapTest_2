@@ -19,7 +19,7 @@
         :src="pointData[item.name]"
       )
 
-    router-link.dialog__control(:to="'/data'")
+    router-link.dialog__control(to="/data")
       el-button.dialog__control__button(type="primary") Закрыть диалог
 </template>
 
@@ -29,10 +29,8 @@ import DATA_CONFIG from '../utils/dataConfig'
 
 export default {
   data() {
-    const config = DATA_CONFIG
-
     return{
-      config: config,
+      config: DATA_CONFIG,
       pointId: null
     }
   },
@@ -41,7 +39,7 @@ export default {
       'pointDescriptionById'
     ]),
     pointData() {
-      if(this.pointId === null) return {}     // TODO: Correct with config
+      if(this.pointId === null) return {} 
 
       return this.pointDescriptionById(this.pointId)
      }

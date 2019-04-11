@@ -35,17 +35,12 @@ export default new Vuex.Store({
   },
 
   actions: {
-  	setAllPoints({commit}, arr) {
-	    commit('SET_ALL_POINTS', arr)
-	  },
-    setDescription({commit}, obj) {
-      commit('SET_DESCRIPTION', obj)
-    },
     async getAllPoints({dispatch, commit}) {
       try {
         const list = await axios.get('list')
 
-        dispatch('setAllPoints', list.data)
+        commit('SET_ALL_POINTS', list.data)
+
       } catch(err) {
         console.error(err)
       }
@@ -57,7 +52,7 @@ export default new Vuex.Store({
       try {
         const pointData =  await axios.get(`description/${id}`)
 
-        dispatch('setDescription', pointData.data)
+        commit('SET_DESCRIPTION', pointData.data)
       } catch(err) {
         console.error(err)
       }
