@@ -19,9 +19,10 @@ export default {
 @import './assets/styles/variables.styl'
 
 .app_wrapper
-  font-family sans-serif
-  width 700px
+  width 750px
   margin-left auto
   margin-right auto
   margin-top 10px
+  position relative
+  font-family sans-serif
 </style>

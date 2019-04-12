@@ -1,9 +1,9 @@
 <template lang="pug">
-	div
+	.map_component
 		yandex-map(
 			:coords="center"
 			zoom="10"
-			style="width: 600px; height: 550px;"
+			style="width: 600px; height: 500px;"
 			:controls="['zoomControl']"
 			map-type="map"
 		)

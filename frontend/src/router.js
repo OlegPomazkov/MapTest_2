@@ -11,16 +11,11 @@ export default new Router({
     {
       path: '/',
       name: 'main',
-      component: DataComp, 
-    },
-    {
-      path: '/data',
-      name: 'table',
-      component: DataComp, 
+      component: DataComp,  
       children: [
         { 
           name: 'dialog',
-          path: ':id', 
+          path: 'point/:id', 
           component: DialogComponent 
         },
       ]

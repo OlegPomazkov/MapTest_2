@@ -65,9 +65,9 @@ export default {
 		align-items center
 
 		&__header
+			margin-top 15px
+			margin-bottom 15px		
 			font-size $title
 			font-weight bold
 			color $textColorDark
-			margin-top 15px
-			margin-bottom 15px
 </style>

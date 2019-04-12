@@ -1,6 +1,6 @@
 <template lang="pug">
-  .table
-    .table__header ТАБЛИЦА КООРДИНАТ 
+  .table_wrapper
+    .table_wrapper__header ТАБЛИЦА КООРДИНАТ 
     
     table-component(
       :points="points"
@@ -37,18 +37,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-	@import '../assets/styles/variables.styl'
+@import '../assets/styles/variables.styl'
 
-	.table
-		display flex
-		flex-direction column
-		justify-content flex-start
-		align-items center
+.table_wrapper
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items center
 
-		&__header
-			font-size $title
-			font-weight bold
-			color $textColorDark
-			margin-top 15px
-			margin-bottom 15px
+	&__header
+		margin-top 15px
+		margin-bottom 15px	
+		font-size $title
+		font-weight bold
+		color $textColorDark
 </style>
